@@ -1,15 +1,17 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main() {
     int deg, dis;
     int w;
-    std::string dir;
+    string dir;
     int i;
 
-    std::cin >> deg >> dis;
+    cin >> deg >> dis;
 
-    const std::string DIR[16] = {"N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"};
+    const string DIR[16] = {"N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"};
     const int W[13] = {0, 15, 93, 201, 327, 477, 645, 831, 1029, 1245, 1467, 1707, 1959};
 
     dir = DIR[((deg * 10 + 1125) / 2250) % 16];
@@ -20,18 +22,18 @@ int main() {
             w = i;
             if (w == 0) {
                 dir = "C";
-                std::cout << dir << " " << w << '\n';
+                cout << dir << " " << w << '\n';
                 break;
             }
 
-            std::cout << dir << " " << w << '\n';
+            cout << dir << " " << w << '\n';
             break;
         }
 
         ++i;
 
         if (i == 12) {
-            std::cout << dir << " " << 12 << '\n';
+            cout << dir << " " << 12 << '\n';
             break;
         }
     }

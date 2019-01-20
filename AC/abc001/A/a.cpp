@@ -1,10 +1,12 @@
 #include <iostream>
 
+using namespace std;
+
 int main(void) {
 	int a, b;
-	std::cin >> a ;
-	std::cin >> b;
-	std::cout << a - b << '\n';
+	cin >> a ;
+	cin >> b;
+	cout << a - b << '\n';
 	return 0;
 }
 
