@@ -5,8 +5,6 @@ using namespace std;
 const int N = 555;
 
 char s[N][N], a[N][N], c[N][N];
-int x[N * N], y[N * N];
-bool was[N][N];
 
 int main() {
     int h, w;
