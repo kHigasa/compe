@@ -60,7 +60,7 @@ int main() {
             if (bx[i] == by[i]) continue;
             int hamsu = disj.get_size(x[i]) + disj.get_size(y[i]);
             if (disj.find(x[i]) == disj.find(y[i])) hamsu /= 2;
-            if (hamsu < x[i]) {
+            if (hamsu < z[i]) {
                 bx[i] = (bx[i] + by[i]) / 2 + 1;
             } else {
                 bx[i] = (bx[i] + by[i]) / 2;
