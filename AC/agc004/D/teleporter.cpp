@@ -20,8 +20,9 @@ int main() {
     scanf("%d %d", &N, &K);
     for (int i = 0; i < N; ++i) {
         scanf("%d", &a);
-        if (i == 0 && a != 1) ans++;
-        tree[a].push_back(i);
+        a--;
+        if (i == 0 && a != 0) ans++;
+        else tree[a].push_back(i);
     }
 
     dfs(0, 0);
