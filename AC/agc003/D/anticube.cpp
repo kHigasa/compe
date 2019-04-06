@@ -3,7 +3,6 @@
 #include <utility>
 #include <map>
 #include <algorithm>
-
 using namespace std;
 typedef long long ll;
 typedef vector<ll> vll;
@@ -94,3 +93,4 @@ int main() {
 
     printf("%lld\n", res);
 }
+
