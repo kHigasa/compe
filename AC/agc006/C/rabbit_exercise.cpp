@@ -1,5 +1,4 @@
-// ref this submission (https://atcoder.jp/contests/agc006/submissions/954907) .
-// editting....
+// i couldn't understand
 
 #include <cstdio>
 #include <algorithm>
@@ -23,5 +22,30 @@ int main() {
         scanf("%d", &a); a--;
         swap(X[a - 1], X[a]);
     }
+    int T[SIZE], nd[SIZE];
+    bool use[SIZE];
+    for (int i = 0; i < N - 1; i++) {
+        if (!use[i]) {
+            int now = i;
+            int len = 0;
+            do {
+                use[now] = true;
+                nd[len++] = now;
+                now = X[now];
+            } while (now != i);
+            for (int j = 0; j < len; j++) {
+                int to = (int) (K % len);
+                to = nd[(j + to) % len];
+                T[nd[j]] = to;
+            }
+        }
+    }
+    ll sum = x[0];
+    for (int i = 0; i < N; i++) {
+        printf("%lld\n", sum);
+        int pos = T[i];
+        sum += x[pos + 1] - x[pos];
+    }
+    return 0;
 }
 
