@@ -1,0 +1,1 @@
+g++ -std=c++17 -Wall --pedantic-errors -o a a.cpp
