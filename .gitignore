@@ -1,6 +1,7 @@
 *.out
 *.cmi
 *.cmx
+*.hi
 *.o
 
 a
@@ -9,6 +10,8 @@ c
 d
 e
 f
+
+.stack-work
 
 .idea/*
 .vscode/*
